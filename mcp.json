@@ -2,11 +2,11 @@
     "mcpServers":{
         "weather":{
             "command":"python",
-            "args":["C:/Users/ParijatSomani/Downloads/code/python/AgentsAndProtocols/mcp/weather.py"]
+            "args":["C:/Users/ParijatSomani/Downloads/code/python/AgentsAndProtocols/mcp_trial/weather.py"]
         },
         "calculator":{
             "command":"python",
-            "args":["C:/Users/ParijatSomani/Downloads/code/python/AgentsAndProtocols/mcp/calc.py"]
+            "args":["C:/Users/ParijatSomani/Downloads/code/python/AgentsAndProtocols/mcp_trial/calc.py"]
         },
         "github": {
             "command": "cmd",

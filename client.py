@@ -13,6 +13,7 @@ import json
 
 load_dotenv()  # load environment variables from .env
 
+
 class MCPClient:
     def __init__(self):
         # Initialize session and client objects
@@ -72,7 +73,7 @@ class MCPClient:
         while True:
             # Call Groq API with tools
             groq_response = await self.groq.chat.completions.create(
-                model="llama-3.3-70b-versatile",
+                model="llama3-8b-8192",
                 max_tokens=1000,
                 messages=messages,
                 tools=available_tools,
