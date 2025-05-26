@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Request
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import asyncio
 import sys, os, json
@@ -8,6 +9,15 @@ asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
 
 app = FastAPI()
 client = MCPClient()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins for CORS
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all methods
+    allow_headers=["*"],  # Allow all headers
+)
 
 class QueryRequest(BaseModel):
     query: str

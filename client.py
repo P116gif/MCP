@@ -73,9 +73,9 @@ class MCPClient:
         while True:
             # Call Groq API with tools
             groq_response = await self.groq.chat.completions.create(
-                model="llama3-8b-8192",
-                max_tokens=1000,
-                messages=messages,
+                model="llama-3.3-70b-versatile",
+                max_tokens=1500,
+                messages=messages, #type:ignore
                 tools=available_tools,
                 tool_choice="auto"
             )
@@ -122,7 +122,7 @@ class MCPClient:
                     messages.append({
                         "role": "tool",
                         "tool_call_id": tool_call.id,
-                        "content": str(result.content) if hasattr(result, "content") else str(result)
+                        "content": str(result.content) if hasattr(result, "content") else str(result) #type:ignore
                     })
                 # Continue the loop to let Groq process the tool results
                 continue
