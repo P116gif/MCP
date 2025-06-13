@@ -2,7 +2,7 @@
     "mcpServers":{
         "weather":{
             "command":"python",
-            "args":["C:/Users/user/Downloads/code/python/AgentsAndProtocols/mcp_trial/weather.py"]
+            "args":["C:/Users/user/Downloads/code/python/AgentsAndProtocols/mcp_trial/oauth_server.py"]
         },
         "calculator":{
             "command":"python",
